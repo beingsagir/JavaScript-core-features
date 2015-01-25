@@ -2,6 +2,10 @@ javascript-basic-practices
 ==========================
 
 javascript-basic-practices
+
+- operators
+- loops
 - array
-- form validation
-- innerHTML
+- functions
+- objects
+- DOM
