@@ -1,0 +1,28 @@
+body{
+	background-color: #eee;
+}
+h1{
+	color: #eee;
+}
+a:visited{
+	color: #00CCFF;
+}
+a{
+	color: #ccc;
+}
+
+.header{
+	background-color: #295266;
+	padding: 2px 12px 2px 12px;
+}
+
+#content{
+	background-color: #fff;
+	padding: 20px;
+	min-height: 430px;
+}
+
+#footer{
+	background-color: #0099CC;
+	padding: 2px;
+}

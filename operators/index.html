@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Very Basic Html css js practice</title>
+	<link rel="stylesheet" type="text/css" href="formStyle.css">
+	<link rel="stylesheet" type="text/css" href="../bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../dashboard.css">
+	<script type="text/javascript" src="inhtml.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">JavaScript Basic Practices</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="fancyfrog.org">fancyfrog</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li><a href="../index.html">Overview <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="./index.html">Operators</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Export</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="">Nav item</a></li>
+            <li><a href="">Nav item again</a></li>
+            <li><a href="">One more nav</a></li>
+            <li><a href="">Another nav item</a></li>
+            <li><a href="">More navigation</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li><a href="">Nav item again</a></li>
+            <li><a href="">One more nav</a></li>
+            <li><a href="">Another nav item</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-3 col-sm-offset-3 col-md-4 col-md-offset-2 main">
+
+
+            <h1>Console Output !</h1>
+            <h1>Equal Check</h1>
+            <h1>Strict Equal Check</h1>
+            <h1>Postfix prefix operators</h1>
+            <h1>Unary Binary Ternary</h1>
+
+          	<div id="footer">
+          		<h5>Sagiruddin Mondal | licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a></h5>
+          	</div>
+
+	       </div>
+         <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-2 main">
+         <code>
+           
+function equalCheck(firstVariable, secondVariable){
+  if (firstVariable == secondVariable) {
+    console.log("firstVariable is equal to secondVariable = " + secondVariable);
+  }else{
+    console.error("firstVariable is not equal to secondVariable = " +firstVariable, secondVariable);
+  }
+}
+
+function strictEqual(firstVariable, secondVariable){
+  if (firstVariable === secondVariable) {
+    console.log("firstVariable is equal to secondVariable = " + secondVariable);
+  }else{
+    console.error("firstVariable is not srtict equal to secondVariable = " +firstVariable, secondVariable);
+  }
+}
+
+function prefixPostfix(){
+  var a = 1;
+  console.log("a = " + a);  
+  console.log("++a = " + ++a);
+  console.log("a = " + a);
+  console.log("a++ = " + a++);
+  console.log("a = " + a);
+}
+
+equalCheck(2, 2);
+strictEqual(5, "5");
+prefixPostfix();
+         </code>
+         </div>
+</body>
+</html>
