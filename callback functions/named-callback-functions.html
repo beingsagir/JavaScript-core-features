@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by beingsagir (http://jsbin.com/nicoluw/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="implementing Named Callback Function" content="Named Callback Function">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+body{
+  background-color: #a9a9a9;
+}
+
+h2{
+  color:#fff;
+  font-size: 14px;
+  padding: 30px 30px;
+}
+</style>
+</head>
+<body>
+  <h2>Please see the console for output</h2>
+<script id="jsbin-javascript">
+var allStudents = [];
+
+function workingWithThat(passedData){
+  if(typeof passedData == 'string'){
+    console.log(passedData);
+    console.log("Global : "+ allStudents);
+  } else if(typeof passedData == 'object'){
+    for(var element in passedData){
+      console.log(element + " : "+ passedData[element] );
+      console.log("Global : "+ allStudents);
+    }
+  }
+}
+
+
+function operation(data, callback){
+  allStudents.push(data);
+  callback(data);
+}
+
+var studentDataInput = {name: "Sagir", age:26, class: "3rd"};
+operation(studentDataInput, workingWithThat);
+
+</script>
+</body>
+</html>
