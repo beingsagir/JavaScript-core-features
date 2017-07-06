@@ -6,8 +6,48 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="dashboard.css">
 	<script type="text/javascript" src="inhtml.js"></script>
+	<style type="text/css">
+	div#txt{
+
+	background-color: #428BCA;
+	border: solid 2px;
+	border-radius: 0px;
+	color: black;
+	width: 65px;
+	padding: 2px;
+	position: absolute;
+    top: 10%;
+    left: 50%;
+    margin-right: -50%; 
+}
+	</style>
+
+<script type="text/javascript">
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+t=setTimeout('startTime()',500);
+}
+
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+</script>
+
 </head>
-<body>
+<body  onload="startTime()">
+
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -19,12 +59,14 @@
           </button>
           <a class="navbar-brand" href="#">JavaScript Basic Practices</a>
         </div>
+       <div id="txt"> </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="fancyfrog.org">fancyfrog</a></li>
           </ul>
         </div>
       </div>
+
     </nav>
 
     <div class="container-fluid">
@@ -53,8 +95,9 @@
         </div>
 
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        	
 
-        	<h1>List of itesms</h1>
+        	<h1>List of items</h1>
 				
 			<ul class="nav nav-sidebar">
 			<li><a href="">Nav item again</a></li>
@@ -66,6 +109,7 @@
 				   
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 footer">
 				<h4>Sagiruddin Mondal | licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a></h4>
+				
 			</div>
         </div>
       </div>
